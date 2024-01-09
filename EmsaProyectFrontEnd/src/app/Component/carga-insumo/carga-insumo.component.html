@@ -1,0 +1,17 @@
+<div class="container">
+    
+    <div class="optionsInsumo">
+        <h1 class="title" >
+            Carga de insumo
+        </h1>
+        <button (click)="cargaComponent('Impresora')"  [ngClass]="optionCompontent === 'Impresora' ? 'componentActive' : ''">Impresora</button>
+        <button (click)="cargaComponent('Computadora')"  [ngClass]="optionCompontent === 'Computadora' ? 'componentActive' : ''">Computadora</button>
+        <button (click)="cargaComponent('Monitor')"  [ngClass]="optionCompontent === 'Monitor' ? 'componentActive' : ''">Monitor</button>
+    </div>
+
+    <div class="containerComponent">
+        <app-carga-impresora *ngIf="optionCompontent==='Impresora'"></app-carga-impresora>
+        <app-carga-computadora *ngIf="optionCompontent==='Computadora'"></app-carga-computadora>  
+        <app-carga-monitor *ngIf="optionCompontent==='Monitor'"></app-carga-monitor>
+    </div>
+</div>

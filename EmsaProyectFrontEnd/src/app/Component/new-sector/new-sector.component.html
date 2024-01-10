@@ -1,1 +1,18 @@
-<p>new-sector works!</p>
+<div class="container">
+    
+    <div class="optionsSector">
+        <h1 class="title" >
+            Sector
+        </h1>
+        <button (click)="cargaComponent('New')"  [ngClass]="optionCompontent === 'New' ? 'componentActive' : ''">Crear</button>
+        <button (click)="cargaComponent('Find')"  [ngClass]="optionCompontent === 'Find' ? 'componentActive' : ''">Buscar</button>
+        <button (click)="cargaComponent('Modify')"  [ngClass]="optionCompontent === 'Modify' ? 'componentActive' : ''">Modificar</button>
+        <button (click)="cargaComponent('Delete')"  [ngClass]="optionCompontent === 'Delete' ? 'componentActive' : ''">Borrar</button>    
+    </div>
+    <div class="containerComponent">
+        <app-create-sector *ngIf="optionCompontent==='New'"></app-create-sector>
+        <app-delete-sector *ngIf="optionCompontent==='Delete'"></app-delete-sector>
+        <app-find-sector *ngIf="optionCompontent==='Find'"></app-find-sector>
+        <app-modify-sector *ngIf="optionCompontent==='Modify'"></app-modify-sector>
+    </div>
+</div>

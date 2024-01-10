@@ -1,0 +1,23 @@
+.container{
+    @apply m-auto w-full h-full flex 
+}
+
+.title{
+    @apply font-semibold text-2xl text-center border-b-2 w-fit justify-center items-center flex m-auto  
+}
+
+.optionsSector{
+    @apply m-10 flex flex-col flex-grow-0 flex-initial items-center justify-center h-full align-middle 
+}
+.optionsSector button{
+    @apply m-4
+}
+
+.componentActive{
+    @apply font-bold 
+}
+
+//container components
+.containerComponent{
+    @apply w-3/4 flex flex-grow-0 m-auto justify-center 
+}

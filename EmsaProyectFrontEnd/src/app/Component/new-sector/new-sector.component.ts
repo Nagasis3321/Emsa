@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './new-sector.component.scss'
 })
 export class NewSectorComponent {
-  optionCompontent:"New"| "Modify" |"Find" |"Delete" = "Find";
+  optionCompontent:"New"| "Modify" |"Find" |"Delete" = "Modify";
 
   cargaComponent(option:"New"| "Modify" |"Find" |"Delete" ):void {
     this.optionCompontent=option;

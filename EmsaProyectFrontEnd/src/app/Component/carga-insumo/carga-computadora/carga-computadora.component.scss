@@ -1,0 +1,37 @@
+.container{
+    @apply w-full grid grid-rows-3
+}
+.container{
+    height: 600px;
+}
+
+.title{
+    @apply text-2xl font-bold h-12
+}
+
+.inputsSolicitante{
+    @apply flex flex-col m-2 row-span-3
+}
+
+.inputsSolicitante input option{
+    @apply text-black
+}
+
+.datosComputadora{
+    @apply flex flex-col m-2 
+}
+
+.nombreEquipo{
+    @apply flex flex-row 
+}
+
+.nombreEquipo label{
+    @apply font-semibold
+}
+
+.nombreEquipo select {
+    @apply w-20 text-black
+}
+.nombreEquipo input{
+    @apply text-black
+}

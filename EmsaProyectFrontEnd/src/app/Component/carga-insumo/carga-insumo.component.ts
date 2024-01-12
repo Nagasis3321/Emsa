@@ -12,9 +12,9 @@ import { CargaMonitorComponent } from './carga-monitor/carga-monitor.component';
   styleUrl: './carga-insumo.component.scss'
 })
 export class CargaInsumoComponent {
-  optionCompontent:string="Impresora";
+  optionCompontent:"Impresora" | "Computadora" | "Monitor" = "Computadora";
 
-  cargaComponent(option:string):void {
+  cargaComponent(option:"Impresora" | "Computadora" | "Monitor"):void {
     this.optionCompontent=option;
   }
 

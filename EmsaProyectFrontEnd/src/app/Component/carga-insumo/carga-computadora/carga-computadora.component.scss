@@ -1,30 +1,56 @@
 .container{
-    @apply w-full grid grid-rows-3
-}
-.container{
-    height: 600px;
+    @apply w-fit h-fit mt-3
 }
 
-.title{
-    @apply text-2xl font-bold h-12
+
+.containerInput{
+    @apply grid grid-cols-2 gap-10 
 }
 
-.inputsSolicitante{
-    @apply flex flex-col m-2 row-span-3
-}
-
-.inputsSolicitante input option{
+.containerInput input option {
     @apply text-black
 }
 
+.title{
+    @apply text-3xl font-bold h-12 border-b-2 w-fit
+}
+
+//Inputs
+.inputsSolicitante{
+    @apply flex flex-col mt-4
+}
+
+.inputsSolicitante label{
+    @apply font-semibold text-base
+}
+
+
+//Estilos datos computadora
 .datosComputadora{
     @apply flex flex-col m-2 
 }
 
+.datosComputadora input{
+    @apply text-black
+}
+
+.datosComputadora label{
+    @apply font-semibold
+}
+
+.datosComputadora  input{
+    
+}
+//Estilos Nombre Equipo
 .nombreEquipo{
     @apply flex flex-row 
 }
-
+.nombreEquipo  label{
+    @apply mr-2
+}
+.nombreEquipo select{
+    @apply mr-2
+}
 .nombreEquipo label{
     @apply font-semibold
 }
@@ -35,3 +61,74 @@
 .nombreEquipo input{
     @apply text-black
 }
+
+//Estilos Team Viewer
+.input-TeamViewer{
+    @apply my-2
+}
+
+.input-TeamViewer label{
+    @apply mr-2
+}
+
+
+//estilos detalle Ingreso
+/*.detalleIngreso{
+    @apply 
+}*/
+
+
+.detalleIngreso label{
+    @apply mr-2 block
+}
+
+.detalleIngreso textarea{
+    padding: 10px;
+    color:black;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+//Estilos accesorios
+.accesorios{
+    @apply flex flex-row 
+}
+
+.accesorios label{
+    @apply font-semibold mr-2  
+}
+
+.accesorios select {
+    @apply w-20 text-black
+}
+.accesorios input{
+    @apply text-black
+}
+
+//Estilos datos accesorios
+.componentAcessorios{
+    @apply w-full my-4 border-2
+}
+
+.componentAcessorios td,table{
+    border: 1px double white;
+}
+.componentAcessorios thead,tfoot{
+
+color: #fff;
+}
+
+.componentAcessorios th{
+    @apply p-4 font-bold;
+    border: 1px double white;
+}
+
+.componentAcessorios th:last-child{
+    @apply w-60;
+}
+

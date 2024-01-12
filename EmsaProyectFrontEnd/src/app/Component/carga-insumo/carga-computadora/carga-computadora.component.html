@@ -25,23 +25,50 @@
                 <input type="text" id="identComputadora">
     
             </div>
-            <label for="">Team Viewer</label>
-            <input type="text">
+            <section class="input-TeamViewer">
+                <label for="">Team Viewer</label>
+                <input type="text">
+            </section>
+                <div class="detalleIngreso">
+                    <label for="">Detalle del Ingreso</label>
+                    <textarea id="story" name="story" rows="5" cols="50"></textarea>
+                        
+                </div>
+                <div class="accesorios">
+                    <label for="">Accesorios</label>
+                    <input type="checkbox" >
+                    
+                </div>
         </div>
+    </div>
+    <div class="componentAcessorios">
+        <label for="">Perifirico</label>
+        <select name="" id="" >
+            <option value="">
+
+            </option>
+        </select>
+        <input type="text" placeholder="descripcion">
+        <button disabled="disabled" (click)="addAccesorio()">+</button>
+        <div class="tableAccesorios">
+            <table>
+                <thead>
+                    <tr>
+                      <th colspan="1">Perifirico</th>
+                      <th colspan="1">Descripcion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <button>Cargar</button>
+    <button>Cancelar</button>
+    <button>Limpiar</button>
     
-        <div class="accesorios">
-            <label for="">Accesorios</label>
-            <select name="" id="">
-                <option value="">
-                </option>
-            </select>
-        </div>
-
-    </div>
-
-    <div class="detalleIngreso">
-        <label for="">Detalle del Ingreso</label>
-        <input type="textarea">
-    </div>
     
 </div>

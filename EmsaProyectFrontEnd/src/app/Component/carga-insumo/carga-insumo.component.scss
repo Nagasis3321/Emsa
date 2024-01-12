@@ -1,5 +1,5 @@
 .container{
-    @apply m-auto w-full h-full flex justify-center items-center
+    @apply m-auto w-full h-fit flex 
 }
 
 .title{
@@ -7,7 +7,7 @@
 }
 
 .optionsInsumo{
-    @apply  m-10 flex flex-col flex-grow-0 flex-initial items-center justify-center h-full align-middle 
+    @apply m-10 flex flex-col flex-grow-0 flex-initial items-center justify-center h-full align-middle 
 }
 .optionsInsumo button{
     @apply m-4
@@ -19,5 +19,5 @@
 }
 
 .containerComponent{
-    @apply w-3/4 h-full flex flex-grow-0 m-auto 
+    @apply w-3/4 h-fit flex flex-grow-0 m-auto 
 }

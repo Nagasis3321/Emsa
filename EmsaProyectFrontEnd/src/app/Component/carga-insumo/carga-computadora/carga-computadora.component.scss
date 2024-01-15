@@ -1,134 +1,170 @@
-.container{
-    @apply w-fit h-fit mt-3
+.container {
+  @apply w-fit h-fit mt-3;
 }
 
-
-.containerInput{
-    @apply grid grid-cols-2 gap-10 
+.containerInput {
+  @apply grid grid-cols-2 gap-10;
 }
 
 .containerInput input option {
-    @apply text-black
+  @apply text-black;
 }
 
-.title{
-    @apply text-3xl font-bold h-12 border-b-2 w-fit
+.title {
+  @apply text-3xl font-bold h-12 border-b-2 w-fit;
 }
 
 //Inputs
-.inputsSolicitante{
-    @apply flex flex-col mt-4
+.inputsSolicitante {
+  @apply flex flex-col mt-4;
 }
 
-.inputsSolicitante label{
-    @apply font-semibold text-base
+.inputsSolicitante label {
+  @apply font-semibold text-base;
 }
 
+.inputsSolicitante input {
+  @apply text-black;
+}
+
+.inputsSolicitante select {
+  @apply text-black;
+}
 
 //Estilos datos computadora
-.datosComputadora{
-    @apply flex flex-col m-2 
+.datosComputadora {
+  @apply flex flex-col m-2;
 }
 
-.datosComputadora input{
-    @apply text-black
+.datosComputadora input {
+  @apply text-black;
 }
 
-.datosComputadora label{
-    @apply font-semibold
+.datosComputadora label {
+  @apply font-semibold;
 }
 
-.datosComputadora  input{
-    
+.datosComputadora h3 {
+  @apply font-bold text-xl border-b w-fit my-3;
 }
 //Estilos Nombre Equipo
-.nombreEquipo{
-    @apply flex flex-row 
+.nombreEquipo {
+  @apply flex flex-row my-2;
 }
-.nombreEquipo  label{
-    @apply mr-2
+.nombreEquipo label {
+  @apply mr-2;
 }
-.nombreEquipo select{
-    @apply mr-2
+.nombreEquipo select {
+  @apply mr-2;
 }
-.nombreEquipo label{
-    @apply font-semibold
+.nombreEquipo label {
+  @apply font-semibold;
 }
 
-.nombreEquipo select {
-    @apply w-20 text-black
+.nombreEquipo p {
+  @apply mr-3 font-bold w-10;
 }
-.nombreEquipo input{
-    @apply text-black
+.nombreEquipo input {
+  @apply text-black;
 }
 
 //Estilos Team Viewer
-.input-TeamViewer{
-    @apply my-2
+.input-TeamViewer {
+  @apply my-2;
 }
 
-.input-TeamViewer label{
-    @apply mr-2
+.input-TeamViewer label {
+  @apply mr-2;
 }
 
-
-//estilos detalle Ingreso
-/*.detalleIngreso{
-    @apply 
-}*/
-
-
-.detalleIngreso label{
-    @apply mr-2 block
+.detalleIngreso label {
+  @apply mr-2 block;
 }
 
-.detalleIngreso textarea{
-    padding: 10px;
-    color:black;
-    max-width: 100%;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+.detalleIngreso textarea {
+  padding: 10px;
+  color: black;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 //Estilos accesorios
-.accesorios{
-    @apply flex flex-row 
+.accesorios {
+  @apply flex flex-row;
 }
 
-.accesorios label{
-    @apply font-semibold mr-2  
+.accesorios label {
+  @apply font-semibold mr-2;
 }
 
 .accesorios select {
-    @apply w-20 text-black
+  @apply w-20 text-black;
 }
-.accesorios input{
-    @apply text-black
+.accesorios input {
+  @apply text-black;
 }
 
 //Estilos datos accesorios
-.componentAcessorios{
-    @apply w-full my-4 border-2
+.componentAcessorios {
+  @apply w-full my-4 border-2;
 }
 
-.componentAcessorios td,table{
-    border: 1px double white;
+.componentAcessorios td,
+table {
+  border: 1px double white;
 }
-.componentAcessorios thead,tfoot{
-
-color: #fff;
-}
-
-.componentAcessorios th{
-    @apply p-4 font-bold;
-    border: 1px double white;
+.componentAcessorios thead,
+tfoot {
+  color: #fff;
 }
 
-.componentAcessorios th:last-child{
-    @apply w-60;
+.componentAcessorios th {
+  @apply p-4 font-bold;
+  border: 1px double white;
 }
 
+.componentAcessorios th:last-child {
+  @apply w-60;
+}
+
+.componentAcessorios label {
+  @apply text-xl font-bold;
+}
+
+.componentAcessorios select {
+  @apply m-3 w-32 rounded-md text-black;
+}
+
+.componentAcessorios input {
+  @apply m-3 w-40 rounded-md text-black;
+}
+
+.componentAcessorios button {
+  @apply font-extrabold text-2xl;
+}
+
+.componentAcessorios {
+  @apply flex m-auto justify-center items-center;
+}
+
+//table Accesorio
+.tableAccesorios table tbody tr td {
+  text-align: center;
+}
+//Estilos Botones carga
+.optionButton {
+  @apply flex m-auto justify-center items-center m-3;
+}
+
+.optionButton button {
+  @apply m-4 font-extrabold text-2xl;
+}
+
+.optionButton button:hover {
+  @apply text-black;
+}

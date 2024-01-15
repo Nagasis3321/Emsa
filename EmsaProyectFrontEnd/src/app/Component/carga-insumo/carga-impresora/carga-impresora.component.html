@@ -1,1 +1,44 @@
-<p>carga-impresora works!</p>
+<div class="container">
+  <h1 class="title">Impresora</h1>
+  <div class="containerInput">
+    <div class="inputsSolicitante">
+      <label for="">Solicitante</label>
+      <input type="text" [(ngModel)]="solicitante" />
+      <label for="">Gerencia</label>
+      <input type="text" [(ngModel)]="gerencia" />
+      <label for="">Sector</label>
+      <select [(ngModel)]="sectorSeleccionado">
+        <option *ngFor="let s of sectores" [ngValue]="s">
+          {{ s.name }}
+        </option>
+      </select>
+
+      <label for="">Telefono</label>
+      <input type="text" name="" id="" [(ngModel)]="telefono" />
+    </div>
+
+    <div class="datosImpresora">
+      <h3>Numero Orden de Reclamo: {{ idOrdenReclamo }}</h3>
+      <div class="nombreEquipo">
+        <label>Nombre del Equipo:</label>
+        <p>{{ sectorSeleccionado?.nomenclatura }} -</p>
+        <input type="text" id="identCImpresora" [(ngModel)]="nombreEquipo" />
+      </div>
+      <div class="detalleIngreso">
+        <label for="">Detalle del Ingreso</label>
+        <textarea
+          id="story"
+          name="story"
+          rows="5"
+          cols="50"
+          [(ngModel)]="detalleIngreso"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="optionButton">
+    <button (click)="cargarImpresora()">Cargar</button>
+    <button routerLink="/">Cancelar</button>
+    <button (click)="limpiar()">Limpiar</button>
+  </div>
+</div>

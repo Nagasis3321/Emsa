@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="inputs">
+        <h1>Buscar Sector</h1>
+        <label for="nombreSector">Nombre:</label>
+        <input type="text" id="nombreSector" [(ngModel)]="nombreSector" (ngModelChange)="nombreSector==='' ? sectoresMostrados=this.sectores : buscarSectores()"  />
+        
+    </div>
+    <div class="table-section">
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody class="scroll-content">
+            <tr *ngFor="let sector of sectoresMostrados" class="scroll-row">
+                <td>{{ sector.id }}</td>
+                <td>{{ sector.name }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>

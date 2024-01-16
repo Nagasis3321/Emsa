@@ -19,6 +19,12 @@
 
     <div class="datosImpresora">
       <h3>Numero Orden de Reclamo: {{ idOrdenReclamo }}</h3>
+      <input
+        type="text"
+        id="nroSerieImpresora"
+        placeholder="Nro de Serie Impresora"
+        [(ngModel)]="nroSerie"
+      />
       <div class="nombreEquipo">
         <label>Nombre del Equipo:</label>
         <p>{{ sectorSeleccionado?.nomenclatura }} -</p>

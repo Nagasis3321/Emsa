@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="inputs">
+
+        <h1 class="title" >
+            Borrar Sector
+        </h1>
+        <label>Nombre</label>
+        <input type="text" name="name" id="nameSector" [(ngModel)]="nameSector">
+        <p *ngIf="errorSectorExist===true" class="error">{{errorText}}</p>
+        <button (click)="newSector()">Borrar</button>
+    </div>
+    
+
+
+</div>

@@ -50,7 +50,7 @@
 
 //Estilos Nombre Equipo
 .nombreEquipo {
-  @apply flex flex-row my-2;
+  @apply flex flex-row my-2 flex-nowrap;
 }
 .nombreEquipo label {
   @apply mr-2;

@@ -1,0 +1,43 @@
+.container{
+    @apply m-auto w-full h-full flex  items-center flex-row
+}
+
+.inputs{
+    @apply m-auto w-fit h-fit flex flex-col 
+}
+
+.inputs h1{
+    @apply text-3xl border-b-2   font-semibold
+}
+
+
+.inputs label{
+    @apply my-5 text-xl font-medium
+}
+
+.inputs input{
+    @apply text-black text-lg
+}
+
+
+table th, td{
+    @apply px-4 border-2 border-separate
+        
+    
+}
+
+table thead{
+    @apply sticky top-0 backdrop-blur-xl
+}
+
+table tr{
+    @apply border-separate w-20 h-8 border-2 
+}
+
+table td{
+    @apply text-xl 
+}
+
+.table-section{
+    @apply  overflow-y-auto max-h-[450px]   ml-24 m-4
+}

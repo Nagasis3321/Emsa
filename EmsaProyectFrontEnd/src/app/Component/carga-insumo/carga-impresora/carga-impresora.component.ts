@@ -18,6 +18,7 @@ export class CargaImpresoraComponent {
   nombreEquipo: string = '';
   idOrdenReclamo: number = 0;
   detalleIngreso: string = '';
+  nroSerie: string = '';
   sectores: { id: number; name: string; nomenclatura: string }[] = [
     { id: 1, name: 'San Vicente', nomenclatura: 'SV' },
     { id: 2, name: 'Jardin America', nomenclatura: 'JA' },

@@ -17,7 +17,7 @@ import { CargaMonitorComponent } from './carga-monitor/carga-monitor.component';
   styleUrl: './carga-insumo.component.scss',
 })
 export class CargaInsumoComponent {
-  optionCompontent: 'Impresora' | 'Computadora' | 'Monitor' = 'Impresora';
+  optionCompontent: 'Impresora' | 'Computadora' | 'Monitor' = 'Monitor';
 
   cargaComponent(option: 'Impresora' | 'Computadora' | 'Monitor'): void {
     this.optionCompontent = option;

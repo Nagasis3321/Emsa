@@ -1,0 +1,37 @@
+.container{
+    @apply m-auto    flex  items-center flex-row  justify-between
+}
+.container{
+    width: 900px;
+}
+.inputs{ 
+    @apply m-auto w-fit h-full flex flex-col   p-3 pt-0 text-nowrap
+}
+
+.inputs h1{
+    @apply text-3xl border-b-2   font-semibold
+}
+
+.inputs label{
+    @apply my-5 text-xl font-medium
+}
+
+.inputs input{
+    @apply text-black text-lg
+}
+
+.modifySector{
+    @apply m-auto w-fit h-full flex flex-col max-h-60 justify-center  items-center 
+}
+
+.modifySector h1{
+    @apply text-3xl border-b-2   font-semibold
+}
+
+.modifySector label{
+    @apply my-5 text-xl font-medium
+}
+
+.modifySector button{
+    @apply m-6 text-xl font-medium rounded-lg border-2 font-bold text-black bg-slate-50 
+}

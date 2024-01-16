@@ -1,1 +1,38 @@
-<p>seguimiento-insumo works!</p>
+<div class="container">
+  <div class="inputs">
+    <select [(ngModel)]="sectorSeleccionado">
+      <option *ngFor="let s of sectores" [ngValue]="s">
+        {{ s.name }}
+      </option>
+    </select>
+    <input type="text" placeholder="Nro Reclamo" />
+    <input type="text" placeholder="Solicitante" />
+    <div class="nombreEquipo">
+      <p></p>
+      <input type="text" placeholder="Nombre equipo" />
+    </div>
+    <input type="date" placeholder="Fecha" />
+  </div>
+  <div class="containerTable">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre Equipo</th>
+          <th>Nro Reclamo</th>
+          <th>Ultima Modificacion</th>
+          <th>Modificar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reclamo of reclamos">
+          <td>{{ reclamo.nombreEquipo }}</td>
+          <td>{{ reclamo.nroReclamo }}</td>
+          <td>{{ reclamo.fechaUltimaModificacion | date : "shortDate" }}</td>
+          <td><button>M</button></td>
+          <td><button>X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

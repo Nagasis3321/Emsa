@@ -1,15 +1,119 @@
+<!-- 
 <div class="container">
-    <h1 class="title" routerLink="">
-        EMSA
-    </h1>
+  <h1 class="title" routerLink="">EMSA</h1>
 
-    <div class="rutas">
-        <button routerLink="/Carga" routerLinkActive="rutaActiva" class="underline-on-hover">Carga</button>
-        <button routerLink="/Busqueda" routerLinkActive="rutaActiva" class="underline-on-hover">Búsqueda</button>
-        <button routerLink="/Seguimiento" routerLinkActive="rutaActiva" class="underline-on-hover">Seguimiento</button>
-        <button routerLink="/Sectores" routerLinkActive="rutaActiva" class="underline-on-hover">Sectores</button>
+  <div class="rutas">
+    <button
+      routerLink="/Carga"
+      routerLinkActive="rutaActiva"
+      class="underline-on-hover"
+    >
+      Carga
+    </button>
+    <button
+      routerLink="/Busqueda"
+      routerLinkActive="rutaActiva"
+      class="underline-on-hover"
+    >
+      Búsqueda
+    </button>
+    <button
+      routerLink="/Seguimiento"
+      routerLinkActive="rutaActiva"
+      class="underline-on-hover"
+    >
+      Seguimiento
+    </button>
+    <button
+      routerLink="/Sectores"
+      routerLinkActive="rutaActiva"
+      class="underline-on-hover"
+    >
+      Sectores
+    </button>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <h1 class="title" routerLink="/">EMSA</h1>
+  <nav>
+    <ul class="menu-horizontal">
+      <li>
+        <button
+          routerLink="/Carga"
+          routerLinkActive="rutaActiva"
+          class="underline-on-hover"
+        >
+          Carga
+        </button>
+        <ul class="menu-vertical">
+          <li>
+            <button routerLink="/Carga">Equipo</button>
+          </li>
+          <li>
+            <button
+              routerLink="/Sectores"
+              routerLinkActive="rutaActiva"
+              class="underline-on-hover"
+            >
+              Sectores
+            </button>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <button
+          routerLink="/Reclamo"
+          routerLinkActive="rutaActiva"
+          class="underline-on-hover"
+        >
+          Reclamo
+        </button>
+      </li>
+
+      <li>
+        <button
+          routerLink="/Seguimiento"
+          routerLinkActive="rutaActiva"
+          class="underline-on-hover"
+        >
+          Seguimiento
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!--<div class="container">
+    <button class="button-menuLateral" (click)="toggleSidebar()">
+        <h1 class="title">
+            CamposLibres
+        </h1>
+    </button>
+    <div class="nav" >
+        <button routerLink='/' routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            Inicio
+        </button>
+        <button routerLink='/Animales' routerLinkActive="active">
+            Animales
+        </button>
+        <button routerLink='/Dueños' routerLinkActive="active">
+            Dueños
+        </button>
+        <button routerLink='/Vacunaciones' routerLinkActive="active">
+            Vacunaciones
+        </button>
+        <button routerLink='/Soporte' routerLinkActive="active">
+            Soporte
+        </button>
+        <button routerLink='/Sesion' routerLinkActive="active">
+            Sesion
+        </button>
     </div>
 
 
 
 </div>
+-->

@@ -5,16 +5,20 @@ import { SeguimientoInsumoComponent } from './Component/seguimiento-insumo/segui
 import { NewSectorComponent } from './Component/new-sector/new-sector.component';
 
 export const routes: Routes = [
-    {
-        path:"Carga", component : CargaInsumoComponent
-    },
-    {
-        path:"Busqueda", component : BusquedaInsumoComponent
-    },
-    {
-        path:"Seguimiento", component : SeguimientoInsumoComponent
-    },
-    {
-        path:"Sectores", component : NewSectorComponent
-    },
+  {
+    path: 'Carga',
+    component: CargaInsumoComponent,
+  },
+  {
+    path: 'Busqueda',
+    component: BusquedaInsumoComponent,
+  },
+  {
+    path: 'Seguimiento',
+    component: SeguimientoInsumoComponent,
+  },
+  {
+    path: 'Sectores',
+    component: NewSectorComponent,
+  },
 ];

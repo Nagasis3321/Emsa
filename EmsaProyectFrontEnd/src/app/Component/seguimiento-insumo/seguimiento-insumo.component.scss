@@ -1,0 +1,29 @@
+.container {
+  @apply w-full m-2;
+}
+
+.inputs {
+  @apply flex flex-row gap-12  m-auto justify-center my-10;
+}
+
+.inputs option,
+.inputs input,
+.inputs select {
+  @apply text-black text-xl;
+}
+
+.containerTable {
+  @apply w-full h-fit m-auto justify-center flex;
+}
+
+.containerTable > table > thead > tr {
+  @apply w-full;
+}
+
+.containerTable > table > thead > tr > th {
+  @apply border-2 p-3 px-16;
+}
+
+.containerTable > table > tbody > tr > td {
+  @apply border-2 pl-2 text-center;
+}

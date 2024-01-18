@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Reclamo Informacion</h1>
+  {{ idReclamo }}
+  <div class="info">
+    <label for="">Nro. Reclamo:</label>
+    <p>{{ reclamo.nroReclamo }}</p>
+    <label for="">Sector:</label>
+    <p>{{ sector.name }}</p>
+    <label for="">Gerencia:</label>
+    <p>{{ reclamo.gerencia }}</p>
+    <label for="">Solicitante:</label>
+    <p>{{ reclamo.solicitante }}</p>
+    <label for="">Telefono:</label>
+    <p>{{ reclamo.telefono }}</p>
+  </div>
+  <div class="detalleInfo">
+    <h2>Detalle Reclamo:</h2>
+    <p>{{ reclamo.detalleIngreso }}</p>
+  </div>
+</div>

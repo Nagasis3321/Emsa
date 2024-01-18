@@ -5,13 +5,22 @@
         {{ s.name }}
       </option>
     </select>
-    <input type="text" placeholder="Nro Reclamo" />
-    <input type="text" placeholder="Solicitante" />
+    <input type="text" placeholder="Nro Reclamo" [(ngModel)]="nroReclamo" />
+    <input type="text" placeholder="Solicitante" [(ngModel)]="solicitante" />
     <div class="nombreEquipo">
-      <p></p>
-      <input type="text" placeholder="Nombre equipo" />
+      <p>{{ sectorSeleccionado.nomenclatura }} -</p>
+      <input
+        type="text"
+        placeholder="Nombre equipo"
+        [(ngModel)]="nombreEquipo"
+      />
     </div>
-    <input type="date" placeholder="Fecha" />
+    <input
+      type="date"
+      placeholder="Fecha"
+      [(ngModel)]="fechaUltimaModificacionString"
+      (ngModelChange)="setFechaUltimaModificacion()"
+    />
   </div>
   <div class="containerTable">
     <table>
@@ -19,20 +28,39 @@
         <tr>
           <th>Nombre Equipo</th>
           <th>Nro Reclamo</th>
+          <th>Solicitante</th>
           <th>Ultima Modificacion</th>
           <th>Modificar</th>
           <th>Eliminar</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let reclamo of reclamos">
+        <tr
+          *ngFor="
+            let reclamo of reclamos
+              | filterReclamo
+                : {
+                    sectorId: sectorSeleccionado.id,
+                    nombreEquipo: nombreEquipo,
+                    nroReclamo: nroReclamo,
+                    fechaUltimaModificacion: fechaUltimaModificacion,
+                    solicitante: solicitante
+                  }
+          "
+        >
           <td>{{ reclamo.nombreEquipo }}</td>
           <td>{{ reclamo.nroReclamo }}</td>
-          <td>{{ reclamo.fechaUltimaModificacion | date : "shortDate" }}</td>
-          <td><button>M</button></td>
+          <td>{{ reclamo.solicitante }}</td>
+          <td>{{ reclamo.fechaUltimaModificacion | formatDate }}</td>
+          <td (click)="viewInfoReclamo(reclamo.nroReclamo)">
+            <button (click)="viewInfoReclamo(reclamo.nroReclamo)">M</button>
+          </td>
           <td><button>X</button></td>
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="reclamoInfo" *ngIf="reclamoInfoBoolean">
+    <app-reclamo-info [idReclamo]="reclamoIdForChildren"></app-reclamo-info>
   </div>
 </div>

@@ -1,0 +1,31 @@
+.container {
+  @apply m-auto flex justify-center flex-col border-4 my-10;
+}
+
+h1 {
+  @apply text-center text-3xl font-bold;
+}
+
+.info {
+  @apply flex-row flex items-center justify-center m-auto my-10;
+}
+
+.info p {
+  @apply mr-6;
+}
+
+.info label {
+  @apply font-bold text-xl mr-2 border-b-2;
+}
+
+.detalleInfo {
+  @apply flex flex-row;
+}
+
+.detalleInfo h2 {
+  @apply font-bold text-2xl mr-3 text-nowrap;
+}
+
+.detalleInfo p {
+  @apply bg-slate-300 text-black w-full font-medium;
+}

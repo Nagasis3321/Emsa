@@ -8,4 +8,5 @@ export interface Reclamo {
   detalleIngreso: string;
   gerencia: string;
   telefono: string;
+  estado: 'proceso' | 'stock' | 'terminado';
 }

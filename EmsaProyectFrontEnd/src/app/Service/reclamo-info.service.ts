@@ -17,6 +17,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'proceso',
     },
     {
       nombreEquipo: 'PO-0431',
@@ -28,6 +29,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'proceso',
     },
     {
       nombreEquipo: 'PO-0432',
@@ -39,6 +41,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'stock',
     },
     {
       nombreEquipo: 'PO-0433',
@@ -50,6 +53,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'stock',
     },
     {
       nombreEquipo: 'PO-0434',
@@ -61,6 +65,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'stock',
     },
     {
       nombreEquipo: 'I-0435',
@@ -72,6 +77,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'terminado',
     },
     {
       nombreEquipo: 'SV-0105',
@@ -83,6 +89,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'terminado',
     },
     {
       nombreEquipo: 'SV-0105',
@@ -94,6 +101,7 @@ export class ReclamoInfoService {
       gerencia: 'Gerencia de Soporte',
       telefono: '123456789',
       detalleIngreso: 'Detalle de prueba',
+      estado: 'terminado',
     },
   ];
 

@@ -61,6 +61,9 @@
     </table>
   </div>
   <div class="reclamoInfo" *ngIf="reclamoInfoBoolean">
-    <app-reclamo-info [idReclamo]="reclamoIdForChildren"></app-reclamo-info>
+    <app-reclamo-info
+      [idReclamo]="reclamoIdForChildren"
+      (cancelarEvent)="closeViewInfoReclamo($event)"
+    ></app-reclamo-info>
   </div>
 </div>

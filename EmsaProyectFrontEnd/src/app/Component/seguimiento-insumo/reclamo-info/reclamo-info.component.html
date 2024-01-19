@@ -1,8 +1,8 @@
 <div class="container">
   <h1>Reclamo Informacion</h1>
-  {{ idReclamo }}
+
   <div class="info">
-    <label for="">Nro. Reclamo:</label>
+    <label for="" :first-Child>Nro:</label>
     <p>{{ reclamo.nroReclamo }}</p>
     <label for="">Sector:</label>
     <p>{{ sector.name }}</p>
@@ -12,9 +12,18 @@
     <p>{{ reclamo.solicitante }}</p>
     <label for="">Telefono:</label>
     <p>{{ reclamo.telefono }}</p>
+    <label for="">Fecha:</label>
+    <p>{{ reclamo.fechaCreacion | formatDate }}</p>
+    <label for="">Estado:</label>
+    <p>{{ reclamo.estado }}</p>
   </div>
   <div class="detalleInfo">
     <h2>Detalle Reclamo:</h2>
     <p>{{ reclamo.detalleIngreso }}</p>
+  </div>
+  <div class="navButton">
+    <button (click)="regresar()">Regresar</button>
+    <button (click)="imprimir()">Imprimir</button>
+    <button (click)="modificar()">Modificar</button>
   </div>
 </div>

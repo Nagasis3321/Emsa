@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormsModule, UntypedFormBuilder } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-
+import { ComputerManagerService } from '../../../Service/CargaComputadora/computer-manager.service';
+import { Computadora } from '../../../Interface/computadora';
+import { getFormattedDate } from '../../../Interface/Date';
 @Component({
   selector: 'app-carga-computadora',
   standalone: true,
@@ -11,6 +13,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './carga-computadora.component.scss',
 })
 export class CargaComputadoraComponent {
+  constructor(private computadoraService: ComputerManagerService) {}
+
   //Variables Carga Computadora
   solicitante: string = '';
   gerencia: string = '';
@@ -75,7 +79,14 @@ export class CargaComputadoraComponent {
     this.listAccesorioSelected.splice(index, 1);
   }
 
-  cargarComputadora() {}
+  cargarComputadora() {
+    const putComputadora: Computadora = {
+      nombreEquipo: this.nombreEquipo,
+      fechaIngreso: getFormattedDate(new Date()),
+      teamViewer: this.teamViewer,
+    };
+    this.computadoraService.putComputadora(putComputadora);
+  }
 
   limpiar(): void {
     this.solicitante = '';

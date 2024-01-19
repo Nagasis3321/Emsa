@@ -123,4 +123,7 @@ export class SeguimientoInsumoComponent {
     this.reclamoInfoBoolean = true;
     this.reclamoIdForChildren = reclamoId;
   }
+  closeViewInfoReclamo(estado: boolean): void {
+    this.reclamoInfoBoolean = estado;
+  }
 }

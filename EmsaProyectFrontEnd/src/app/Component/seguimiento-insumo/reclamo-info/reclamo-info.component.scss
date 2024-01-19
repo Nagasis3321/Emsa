@@ -7,7 +7,7 @@ h1 {
 }
 
 .info {
-  @apply flex-row flex items-center justify-center m-auto my-10;
+  @apply flex-row flex items-center justify-center m-auto my-10 w-full text-nowrap;
 }
 
 .info p {
@@ -16,6 +16,10 @@ h1 {
 
 .info label {
   @apply font-bold text-xl mr-2 border-b-2;
+}
+
+.info label:first-child {
+  @apply ml-2 text-nowrap;
 }
 
 .detalleInfo {
@@ -28,4 +32,16 @@ h1 {
 
 .detalleInfo p {
   @apply bg-slate-300 text-black w-full font-medium;
+}
+
+.navButton {
+  @apply m-auto flex items-center justify-between mt-5 text-xl font-bold;
+}
+
+.navButton button {
+  @apply mr-10 rounded-xl border-2 m-3 p-2;
+}
+
+.navButton button:hover {
+  @apply bg-slate-400 text-black;
 }

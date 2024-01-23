@@ -1,11 +1,17 @@
-const express = require('express')
-const computadoraController = require('../controllers/computadoraController')
+import { Router } from 'express'
+import { createComputadora } from '../controllers/computadoraController.js'
 
-const router = express.Router()
+const router = Router()
+
+router.route('/computadora').post(createComputadora)
+
+/*.get(authController.protect, eventController.getAllEvents)
+.post(authController.protect, eventController.createEvent)
 
 router
-    .route('/computadora')
-    .get(computadoraController.getAllComputadoras)
-    .post(computadoraController.createComputadora);
+.route('/:id')
+.get(authController.protect, eventController.getOneEvent)
+.patch(authController.protect, eventController.updateEvent)
+.delete(authController.protect, eventController.deleteEvent)*/
 
-module.exports = router
+export default router

@@ -1,37 +1,36 @@
-const express = require('express');
-const compression = require('compression');
-const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
-const mongoSanitize = require('express-mongo-sanitize');
-const xssClean = require('xss-clean');
-const hpp = require('hpp');
-const cargaRoutes = require('./routes/cargaRoutes');
-const reclamoRoutes = require('./routes/reclamoRoutes');
-const seguimientoRoutes = require('./routes/seguimientoRoutes.js');
+import express from 'express'
+import compression from 'compression'
+import helmet from 'helmet'
+import rateLimit from 'express-rate-limit'
+import mongoSanitize from 'express-mongo-sanitize'
+import xssClean from 'xss-clean'
+import hpp from 'hpp'
+import cargaRoutes from './routes/cargaRoutes.js'
+import errHandler from './utils/errHandler.js'
 
-const app = express();
+const app = express()
 
-app.use(helmet());
+app.use(helmet())
 
 const limiter = rateLimit({
-    max: 100,
-    windowMs: 60 * 60 * 1000,
-    message: 'Too many requests from this IP, please try again in an hour',
-});
-app.use(limiter);
+	max: 100,
+	windowMs: 60 * 60 * 1000,
+	message: 'Too many requests from this IP, please try again in an hour',
+})
+app.use(limiter)
 
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json({ limit: '10kb' }))
 
-app.use(mongoSanitize());
+app.use(mongoSanitize())
 
-app.use(xssClean());
+app.use(xssClean())
 
-app.use(hpp());
+app.use(hpp())
 
-app.use(compression());
+app.use(compression())
 
-app.use('/carga', cargaRoutes);
-app.use('/reclamo', reclamoRoutes);
-app.use('/seguimiento', seguimientoRoutes);
+app.use('/carga', cargaRoutes)
 
-module.exports = app;
+app.use(errHandler)
+
+export default app
